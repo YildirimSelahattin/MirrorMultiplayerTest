@@ -37,7 +37,7 @@ public class PlayerController : NetworkBehaviour
 
 	void FixedUpdate()
 	{
-		if (!isLocalPlayer) return;
+		if (!isLocalPlayer && !GameManager.Instance.gameStart) return;
 		Vector2 moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 		Vector3 targetVelocity = new Vector3(moveDir.x, 0, moveDir.y) * moveSpeed;
 

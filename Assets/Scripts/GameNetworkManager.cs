@@ -14,6 +14,9 @@ public class GameNetworkManager : NetworkManager
         Transform start = numPlayers == 0 ? leftRacketSpawn : rightRacketSpawn;
         GameObject player = Instantiate(playerPrefab, start.position, start.rotation);
         NetworkServer.AddPlayerForConnection(conn, player);
+        
+        //Debug.Log(conn.identity.netId);
+        //1'den baslayarak numaralandırır
 
         if (numPlayers == 2)
         {
