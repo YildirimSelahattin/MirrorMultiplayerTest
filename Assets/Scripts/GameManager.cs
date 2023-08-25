@@ -8,6 +8,7 @@ public class GameManager : NetworkBehaviour
     public static GameManager Instance;
     public bool gameStart = false;
     public List<Color> colors;
+    public GameNetworkManager gameNetworkManager;
 
     void Awake()
     {

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5715322584890742902}
   - component: {fileID: 4487248346299700814}
   - component: {fileID: 8936104084184707343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,8 @@ GameObject:
   - component: {fileID: 5956386168859808286}
   - component: {fileID: -1449613454340564963}
   - component: {fileID: 678034305220570767}
-  m_Layer: 0
+  - component: {fileID: -293490364403945596}
+  m_Layer: 6
   m_Name: MobPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -314,6 +315,18 @@ MonoBehaviour:
   compressRotation: 0
   positionPrecision: 0.01
   scalePrecision: 0.01
+--- !u!114 &-293490364403945596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957809997524510189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf289d717871164ab7844785ba29622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3627009393108426536
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +339,7 @@ GameObject:
   - component: {fileID: 1199430890572358633}
   - component: {fileID: 2879046774611150796}
   - component: {fileID: 2094941454587391751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1566889041268044591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'Mop '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +477,7 @@ GameObject:
   - component: {fileID: 4008540036002210554}
   - component: {fileID: 8127050468607068231}
   - component: {fileID: 2481312305407693536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,6 +578,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8078815152888868622}
     m_Modifications:
+    - target: {fileID: 337662379893982095, guid: cd1ba387ee2b32d428376c46eadccb7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1329648098271033758, guid: cd1ba387ee2b32d428376c46eadccb7d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -630,6 +648,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2870415052687097076, guid: cd1ba387ee2b32d428376c46eadccb7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4513289695317824816, guid: cd1ba387ee2b32d428376c46eadccb7d,
         type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -664,6 +687,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Eraser
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165424663461160649, guid: cd1ba387ee2b32d428376c46eadccb7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819722175764956187, guid: cd1ba387ee2b32d428376c46eadccb7d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4044690014861837744, guid: cd1ba387ee2b32d428376c46eadccb7d, type: 3}
