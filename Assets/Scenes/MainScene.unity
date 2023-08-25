@@ -1431,7 +1431,7 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  gameNetworkManager: {fileID: 0}
+  gameNetworkManager: {fileID: 536617288}
 --- !u!4 &2094156522
 Transform:
   m_ObjectHideFlags: 0
@@ -2095,7 +2095,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 1101518396440457021}
-  cooldown: -824.5243
+  cooldown: -834.45404
   currentReader:
     dirty: 0
     requested: 0

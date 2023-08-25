@@ -5,14 +5,13 @@ using Mirror;
 
 public class GameNetworkManager : NetworkManager
 {
-    public GameNetworkManager Instance;
     public Transform baseSpawnPoint;
     Transform start;
     public int playerCount;
 
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        playerCount = numPlayers;
+        playerCount++;
         // add player at correct spawn position
         if (numPlayers % 2 == 0)
         {

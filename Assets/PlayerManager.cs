@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using Mirror;
-using Mirror.Examples.Basic;
 using PaintIn3D;
 using UnityEngine;
 
@@ -10,15 +7,26 @@ public class PlayerManager : NetworkBehaviour
     GameObject mob;
     MeshRenderer _meshRenderer;
 
-    void Start()
+    [SyncVar]
+    Color playerColor;
+
+    public override void OnStartClient()
     {
-        if (!isLocalPlayer) return;
+        base.OnStartClient();
+        SetPlayerColor(playerColor);
+    }
+
+    [Server]
+    public override void OnStartServer()
+    {
+        playerColor = GameManager.Instance.colors[GameManager.Instance.gameNetworkManager.playerCount - 1];
+    }
+
+    void SetPlayerColor(Color color)
+    {
         mob = gameObject.transform.GetChild(0).gameObject;
         _meshRenderer = gameObject.GetComponent<MeshRenderer>();
-        Debug.LogError(GameManager.Instance.gameNetworkManager.playerCount);
-        Debug.LogError(GameManager.Instance.colors[GameManager.Instance.gameNetworkManager.playerCount]);
-        mob.GetComponent<P3dPaintDecal>().Color = GameManager.Instance.colors[GameManager.Instance.gameNetworkManager.playerCount];
-        _meshRenderer.material.color = GameManager.Instance.colors[GameManager.Instance.gameNetworkManager.playerCount];
-        
+        mob.GetComponent<P3dPaintDecal>().Color = color;
+        _meshRenderer.material.color = color;
     }
 }
